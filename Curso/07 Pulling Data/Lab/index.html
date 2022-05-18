@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>xAPI in Action Example</title>
+	<!-- Mobile Specific Metas -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  	<!-- Custom CSS -->
+  	<link rel="stylesheet" type="text/css" href="css/interaction.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<h5>Send Simple Statement on Button Click</h5>
+		<p>In the following example you will learn how to send a simple xAPI statement.</p>
+
+		<form>
+			<div class="form-group">
+				<label for="nameEntered"><b>Name:</b></label>
+				<input type="text" onblur="saveName()" class="form-control form-control-lg" id="nameEntered" placeholder="Type in your name">
+			</div>
+			<div class="form-group">
+				<label for="userEmail"><b>Email address:</b></label>
+				<input type="email" onblur="saveEmail()" class="form-control form-control-lg" id="userEmail" aria-describedby="emailHelp" placeholder="Enter your email">
+			</div>
+		</form>
+
+		<!-- Button to send statement -->
+		<div class="row">
+			<div class="col-sm-4">
+				<button type="button" onclick="sendStarted()" class="btn btn-success btn-lg btn-block">STARTED STATEMENT</button>
+			</div>
+			<div class="col-sm-4">
+				<button type="button" onclick="sendInteracted()" class="btn btn-primary btn-lg btn-block">INTERACTED STATEMENT</button>
+			</div>
+			<div class="col-sm-4">
+				<button type="button" onclick="sendCompleted()" class="btn btn-danger btn-lg btn-block">COMPLETED STATEMENT</button>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h5>Pull Data</h5>
+			</div>
+		</div>
+
+		<!-- Generate Experience -->
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="button" onclick="generateData()" class="btn btn-info btn-lg btn-block">PULL DATA</button>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<h6>Interaction Count:</h6>
+				<p class="intCount" id="interactionCount">0</p>
+			</div>
+			<div class="col-sm-4">
+				<h6>Started Count:</h6>
+				<p class="intCount" id="startedCount">0</p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+	<!-- xAPI Wrapper -->
+	<script src="js/cryptojs_v3.1.2.js"></script>
+	<script src="js/xapiwrapper.js"></script>
+
+	<!-- Custom JS -->
+	<script src="js/interaction.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+body{
+	margin-top: 20px;
+	background-color: #d5d9de;
+}
+
+p{
+	color: #656565;
+}
+
+.container{
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 5px #9d9d9d;
+}
+
+.intCount{
+	font-weight: bold;
+	background-color: #874a73;
+	font-weight: 50px;
+	color: #fff;
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 20px;
+}

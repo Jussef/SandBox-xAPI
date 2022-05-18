@@ -1,0 +1,21 @@
+// Step 1 //
+var interactedVerbs = getInteractedStatememts();
+var intVerbsArr = ADL.XAPIWrapper.getStatements(interactedVerbs);
+
+// Step 2 //
+function getInteractedStatememts(){
+	var myparams = ADL.XAPIWrapper.searchParams();
+	myparams['since'] = timeSince.toISOString();  
+	myparams['verb'] = 'http://adlnet.gov/expapi/verbs/interacted';  
+	myparams['activity'] = 'http://learningdojo.net/xapi/simple_button';  
+	myparams['agent'] = '{"mbox": "mailto:'+email+'"}';  
+
+	return myparams
+}
+
+// Step 3 // 
+// Go through array
+if (intVerbsArr) { 
+	var interactionCount = intVerbsArr.statements.length;
+	document.getElementById('interactionCount').innerHTML = interactionCount;
+}
