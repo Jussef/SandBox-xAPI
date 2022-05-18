@@ -73,7 +73,7 @@ function onPlayerReady(event) {
 
     //   Intialized verb
     if(xAPIReporting){
-        sendBasicStatement("http://adlnet.gov/expapi/verbs/initialized", "initialized", objectName, "user was able to initialize the " + objectName + " video.")
+        sendBasicStatement("http://adlnet.gov/expapi/verbs/initialized", "initialized", objectName, "el usuario pudo inicializar el " + objectName + " video.")
     }
 
 }
@@ -82,12 +82,12 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
     if (event.data == 1){ //Playing
         if(xAPIReporting){
-            sendBasicStatement("https://w3id.org/xapi/video/verbs/played", "played", objectName, "User was able to start "+ objectName +" video.");
+            sendBasicStatement("https://w3id.org/xapi/video/verbs/played", "played", objectName, "El usuario pudo inicar "+ objectName +" video.");
         }
         console.log('playing');
     } else if (event.data == 2){ //Paused
         if(xAPIReporting){
-            sendBasicStatement("http://id.tincanapi.com/verb/paused", "paused", objectName + " at " + Math.round(player.getCurrentTime()) + " seconds.", "User paused the " + objectName + " video.");
+            sendBasicStatement("http://id.tincanapi.com/verb/paused", "pauso", objectName + " a los " + Math.round(player.getCurrentTime()) + " segundos.", "El usuario pauso el " + objectName + " video.");
         }
         console.log('paused');
     } else if (event.data == 0){ //Ended
@@ -160,17 +160,17 @@ function sendBasicStatement(verbID, verb, objectName, objectDesc){
 		"verb": {
 			"id": verbID,
 			"display": {
-				"en-US": verb
+				"es-MX": verb
 			}
 		},
 		"object": {
 			"id": objectID,
 			"definition": {
 				"name": {
-					"en-US": objectName
+					"es-MX": objectName
 				},
 				"description": {
-					"en-US": objectDesc
+					"es-MX": objectDesc
 				}
 			},
 			"objectType": "Activity"
