@@ -1,8 +1,8 @@
 // Variables
-var name = "Sammy McGee";
-var email = "jeffbatt@gmail.com"
+var name = "";
+var email = ""
 // Date
-var newDate = "March 2, 2018 01:00:00";
+var newDate = "May 10, 2022 00:00:00";
 var timeSince = new Date(newDate);
 // Store data
 var txt = " ";
